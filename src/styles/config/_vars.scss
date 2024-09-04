@@ -1,0 +1,14 @@
+$color-background: rgb(21, 21, 21, var(--color-opacity, 1));
+
+$color-primary: rgb(143, 143, 255, var(--color-opacity, 1));
+$color-accent: rgb(255, 235, 28, var(--color-opacity, 1));
+$color-secondary: rgb(254, 100, 250, var(--color-opacity, 1));
+$color-black: rgb(21, 21, 21, var(--color-opacity, 1));
+$color-gray: rgb(50, 50, 50, var(--color-opacity, 1));
+
+$font-family-primary: "Suisse", sans-serif;
+$font-family-secondary: "Unbounded Variable", sans-serif;
+
+$transition-colors:
+  color 300ms ease,
+  background-color 300ms ease;

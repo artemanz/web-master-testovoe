@@ -1,0 +1,19 @@
+@use "@/styles/config" as *;
+
+#app {
+  --header-height: 5.25rem;
+  --header-margin-top: 1.25rem;
+  --container-width: 20rem;
+  font-family: $font-family-primary;
+
+  @media ($min-tablet) {
+    --header-margin-top: 2.5rem;
+    --container-width: 45.5rem;
+  }
+  @media ($min-laptop) {
+    --container-width: 60rem;
+  }
+  @media ($min-desktop) {
+    --container-width: 85rem;
+  }
+}

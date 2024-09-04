@@ -1,0 +1,214 @@
+@use "@/styles/config" as *;
+
+.title {
+  font-family: $font-family-secondary;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  display: inline-flex;
+  z-index: 0;
+  line-height: 1.25;
+
+  .title-inner {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.875rem;
+    gap: 3rem;
+    position: relative;
+    padding-top: 7rem;
+    letter-spacing: 0.03em;
+    z-index: 1;
+    @media ($min-tablet) {
+      font-size: 5.875rem;
+      padding-top: 10rem;
+    }
+    @media ($min-laptop) {
+      font-size: 7.5rem;
+      padding-top: 13rem;
+    }
+    @media ($min-desktop) {
+      font-size: 10rem;
+      padding-top: 17rem;
+    }
+  }
+
+  .title-start {
+    color: #fff;
+    rotate: 12deg;
+    transform-origin: top left;
+    position: absolute;
+    left: 0.25rem;
+    top: 0;
+    @media ($min-tablet) {
+      left: 0.5rem;
+      rotate: 8deg;
+    }
+  }
+
+  .title-end {
+    color: $color-secondary;
+  }
+
+  .title-rope {
+    position: absolute;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 22rem;
+      width: 0.125rem;
+      left: 0;
+      bottom: 0;
+      translate: -50% 0;
+      border-radius: 0.125rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $color-black;
+      display: block;
+      width: 0.3125rem;
+      height: 0.3125rem;
+      left: 50%;
+      translate: -50% 50%;
+      border-radius: 100%;
+      bottom: 0;
+    }
+
+    &.-left {
+      left: 0.5rem;
+      bottom: 9.5rem;
+
+      @media ($min-tablet) {
+        left: 1rem;
+        bottom: 15.5rem;
+      }
+      @media ($min-laptop) {
+        bottom: 20rem;
+        left: 1.25rem;
+      }
+      @media ($min-desktop) {
+        bottom: 26rem;
+      }
+      &::after {
+        background-color: $color-secondary;
+      }
+    }
+
+    &.-right {
+      right: 4.75rem;
+      bottom: 6.5rem;
+
+      @media ($min-tablet) {
+        right: 9rem;
+        bottom: 11rem;
+      }
+      @media ($min-laptop) {
+        bottom: 14.5rem;
+        right: 11.5rem;
+      }
+      @media ($min-desktop) {
+        right: 15.5rem;
+        bottom: 18.75rem;
+      }
+
+      &::after {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  .title-badge {
+    z-index: 2;
+    position: absolute;
+    color: $color-black;
+    transform-origin: top right;
+    rotate: -30deg;
+    bottom: -0.6rem;
+    left: 6.1rem;
+    @media ($min-tablet) {
+      bottom: 0;
+      left: -2.5rem;
+      rotate: -40deg;
+    }
+    @media ($min-laptop) {
+      bottom: 0.25rem;
+    }
+    @media ($min-desktop) {
+      left: -4.5rem;
+      bottom: 0;
+    }
+  }
+
+  .title-badge-text {
+    background-color: $color-accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.375rem;
+    height: 1.5625rem;
+    border-radius: 1000px;
+    font-size: 0.8125rem;
+    @media ($min-laptop) {
+      font-size: 1rem;
+      width: 7.75rem;
+      height: 1.875rem;
+    }
+    @media ($min-desktop) {
+      width: 11.6875rem;
+      height: 2.875rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .title-badge-hook-front {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: 60% -50%;
+    rotate: -30deg;
+    width: 1.5rem;
+    height: 1.5rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media ($min-desktop) {
+      width: 2.25rem;
+      height: 2.25rem;
+      right: 0;
+      top: 50%;
+    }
+  }
+
+  .title-badge-hook-back {
+    position: absolute;
+    bottom: 0rem;
+    left: 11.75rem;
+    rotate: 145deg;
+    width: 1.5rem;
+    height: 1.5rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media ($min-tablet) {
+      left: 3.25rem;
+      bottom: 0.75rem;
+    }
+    @media ($min-laptop) {
+      left: 4.5rem;
+      bottom: 1.25rem;
+    }
+    @media ($min-desktop) {
+      width: 2.25rem;
+      height: 2.25rem;
+      left: 6rem;
+      bottom: 1.5rem;
+    }
+  }
+}

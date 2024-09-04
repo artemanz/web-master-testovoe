@@ -1,0 +1,90 @@
+div#app
+  header.header
+    div.header-start
+      .header-logo
+        include /components/logo.pug
+    div.header-end
+      button.header-burger(data-selector='header-burger')
+        include /components/burger.pug
+      nav.header-mobile-menu(data-selector='header-mobile-menu')
+        ul.header-mobile-menu-list
+          li
+            a.header-mobile-menu-link(href="#") Наши предложения
+          li
+            a.header-mobile-menu-link(href="#") Цены
+      nav.header-desktop-nav
+        ul.header-desktop-nav-list
+          li
+            a.header-desktop-nav-link(href="#") Наши предложения
+          li
+            a.header-desktop-nav-link(href="#") Цены
+
+
+
+  main.main
+    .main-inner
+      .main-gradient-decor
+      .main-star-decor
+        include /components/star.pug
+
+      .main-content
+        .main-title.title
+          h1.title-inner
+            span.title-start черная
+            span.title-end пятница
+          .title-ropes
+            .title-rope.-left
+            .title-rope.-right
+          .title-badge-hook-back
+            include /components/badge-hook.pug
+          .title-badge
+            .title-badge-text sale
+              .title-badge-hook-front
+                include /components/badge-hook.pug
+
+        .main-offer
+          p.main-offer-up-title Воспользуйтесь выгодными предложениями от Roistat в ноябре*
+          button.main-offer-button.button(data-selector="form-modal-trigger")
+            |Получить выгоду
+            include /components/arrow-right.pug
+          p.main-offer-subtitle *Акция не распространяется на подключение опций, лимитов, которые были подключены ранее до 1.11.2023 Количество предложений ограничено
+
+    .main-promo-lines
+      .main-promo-line.promo-line.-down
+        div.promo-line-bg
+        div.promo-line-img(style={"background-image": "url(/images/promo-line-down.svg)"})
+      .main-promo-line.promo-line.-up
+        div.promo-line-bg
+        div.promo-line-img(style={"background-image": "url(/images/promo-line-up.svg)"})
+
+
+
+.form-modal.modal(data-selector="modal" style="display:none")
+  .modal-backdrop(data-selector="modal-backdrop")
+
+  form.modal-inner.form(data-selector="register-form")
+    .form-inner
+      button.form-modal-close.modal-close(data-selector="modal-close" type="button")
+        include /components/close.pug
+      p.form-title Регистрация
+      .form-inputs
+        .input-group
+          input.input(type="text" placeholder="Имя" data-selector="name-input")
+          p.input-message(data-selector="name-input-msg")
+            |Имя должно содержать только буквы и иметь длину &gt;3 символов
+
+        .input-group
+          input.input(type="text" placeholder="Сайт компании" data-selector="site-input")
+          p.input-message(data-selector="site-input-msg")
+            |Ссылка на сайт должна иметь длину &gt;3 символов
+
+        .input-group
+          input.input(type="text" placeholder="Телефон" data-selector="phone-input")
+          p.input-message(data-selector="phone-input-msg")
+            |Некорректно введен номер телефона
+
+      button.form-button.button(data-selector="form-submit-button" disabled) Получить код
+      .form-footer
+        input.checkbox(type="checkbox" data-selector="personal-data-check")
+        p.form-footer-text
+          |Отправляя сведения через электронную форму, вы даете согласие на обработку персональных данных, в том числе сбор, хранение и передачу третьим лицам представленной вами информации на условиях <a href="#">Политики обработки персональных данных</a>.

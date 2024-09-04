@@ -1,0 +1,13 @@
+@mixin text-stroke($color) {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $color;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      @content;
+    }
+  }
+}

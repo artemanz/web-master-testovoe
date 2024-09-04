@@ -1,0 +1,60 @@
+@use "@/styles/config" as *;
+
+.promo-line {
+  height: 5.5rem;
+  position: absolute;
+  width: 200vw;
+  left: 50%;
+  translate: -50% 0;
+  border-top: 1px solid #323232;
+  background-color: rgba(29, 29, 29, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+
+  .promo-line-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .promo-line-img {
+    height: 100%;
+    background-repeat: repeat;
+    position: relative;
+  }
+
+  &.-down {
+    rotate: -5deg;
+    top: 6.5rem;
+    z-index: 0;
+    @media ($min-tablet) {
+      top: 4rem;
+    }
+
+    .promo-line-img {
+      background-position: 72% 0%;
+
+      @media ($min-tablet) {
+        background-position: 60% 0%;
+      }
+    }
+  }
+
+  &.-up {
+    top: 2rem;
+    z-index: 1;
+    rotate: -12deg;
+    @media ($min-tablet) {
+      top: 2.75rem;
+    }
+    @media ($min-laptop) {
+      top: 2rem;
+    }
+
+    .promo-line-img {
+      background-position: -2% 0%;
+      @media ($min-tablet) {
+        background-position: 70% 0%;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "@/styles/config" as *;
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  height: 3.25rem;
+  background-color: $color-primary;
+  border-radius: 1rem;
+  width: 20rem;
+  padding: 1rem 1.5rem;
+  font-family: $font-family-secondary;
+  transition: $transition-colors;
+  border: 1px solid $color-primary;
+
+  @include hover {
+    background-color: #a3a3ff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:active:not(:disabled) {
+    background-color: #6464ff;
+  }
+}

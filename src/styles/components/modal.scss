@@ -1,0 +1,21 @@
+@use "@/styles/config" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(auto, 31.25rem);
+  place-content: center;
+  padding-inline: 1rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.modal-inner {
+  position: relative;
+}
